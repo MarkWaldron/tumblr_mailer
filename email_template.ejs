@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+</head>
+<body>
+  <p>Hey <%= firstName %>,</p>
+  <br>
+  <p>
+    It's been <%= numMonthsSinceContact %> months since we last spoke. I'm currently attending
+    Fullstack Academy and I wanted to keep you updated via my blog!
+  </p>
+  <p>
+    You can check out my blog <a href="http://fullstackblog.markewaldron.com">here</a>!
+    <br>
+    You can also check out my latest posts below!
+    <ul>
+      <% for(var i = 0; i<latestPosts.length;i++){ %>
+        <li>
+          <a href=<%= latestPosts[i].url %>> <%=latestPosts[i].title%></a>
+        </li>
+      <% } %>
+    </ul>
+  </p>
+  <p>
+    I hope you enjoy!<br>
+    ++Mark
+  </p>
+</body>
+</html>
